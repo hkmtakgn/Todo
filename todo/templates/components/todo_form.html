@@ -1,0 +1,9 @@
+<form action="" method="post" class="mt-3 w-75 mx-auto">
+    {% csrf_token %}
+    <div class="form-control border border-0">
+        {{ todo_form.task_name }}
+    </div>
+    <button type="submit" class="btn btn-success mt-3 mx-auto">Save</button>
+</form>
+
+

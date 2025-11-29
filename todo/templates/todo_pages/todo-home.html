@@ -1,0 +1,9 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<h1 class="text-center mt-3">Todo</h1>
+{% include 'components/todo_form.html' with todo_form=todo_form %}
+{% include 'components/todo_list.html' with todos=todos %}
+{% endblock content %}
+
+

@@ -1,0 +1,10 @@
+
+
+{% if todos %}
+<ul class="list-group mt-3">
+  {% for todo in todos %}
+  <li class="list-group-item d-flex justify-content-center"><span class="ms-auto">{{ todo.task_name }}</span><a href="{% url 'edit_task' task_slug=todo.task_slug task_id=todo.id %}" class="ms-auto btn btn-outline-secondary">Edit</a><a href="{% url 'del_task' task_slug=todo.task_slug task_id=todo.id %}" class="ms-1 btn btn-outline-danger">Delete</a></li>
+  {% endfor %}
+</ul>
+{% endif %}
+
